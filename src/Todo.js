@@ -28,7 +28,6 @@ if(obj.data ===""){
 } else
      setTodos([...todos,obj]);
       setTodo("");
-      console.log(obj);
     }
     const takeInput=(e)=>{
         let val=e.target.value; 
@@ -57,7 +56,6 @@ if(obj.data ===""){
   }
   //Edit Functionality in Completed List
   const handleEdit2 = (id) => {
-    console.log("hi")
     for(let i=0;i<complete.length;i++){
       if(complete[i].id===id){
         setTodo(complete[i].data);
@@ -88,7 +86,6 @@ if(obj.data ===""){
           data : complete[i].data,
           id : complete[i].id,
         }
-        console.log(complete[i].id)
        setTodos([...todos,obj]) ;
        complete.splice(i,1); 
       }
